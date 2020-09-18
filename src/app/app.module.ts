@@ -3,16 +3,39 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProductListComponent } from './components/product-list/product-list.component';
+import { HttpClientModule} from '@angular/common/http';
+import { ProductService} from './services/product.service';
+import { APP_BASE_HREF } from '@angular/common';
 
+import { ProductCategoryMenuComponent } from './components/product-category-menu/product-category-menu.component';
+import { SearchComponent } from './components/search/search.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+// const routes: Routes = [
+//   {path: 'category/:id', component: ProductListComponent},
+//   {path: 'category', component: ProductListComponent},
+//   {path: 'products', component: ProductListComponent},
+//   {path: '', redirectTo: '/products', pathMatch: 'full'},
+//   {path: '**', redirectTo: '/products', pathMatch: 'full'}
+// ];
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ProductListComponent,
+    ProductCategoryMenuComponent,
+    SearchComponent,
+    ProductDetailsComponent
   ],
   imports: [
+    // RouterModule.forRoot(routes),
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    NgbModule
   ],
-  providers: [],
+providers: [ProductService,{provide: APP_BASE_HREF, useValue: ''}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
