@@ -23,6 +23,13 @@ export class ProductService {
     return this.httpClient.get<GetResponseProducts>(searchUrl);
   }
 
+  searchProductsPaginate(page:number, pageSize:number, keyword: string): Observable<GetResponseProducts> {
+  
+    const searchUrl = `http://localhost:8080/api/products/search/findByCategoryId?id=${keyword}
+    +&page=${page}&size=${pageSize}`;
+    return this.httpClient.get<GetResponseProducts>(searchUrl);
+  }
+
 
   getProductList(categoryId: number): Observable<Product[]> {
   
