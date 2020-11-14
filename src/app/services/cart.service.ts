@@ -74,11 +74,11 @@ export class CartService {
 
     for (let temp of this.cartItems){
       const subTotal = temp.quantity * temp.unitPrice;
-      console.log(`el ide es= ${temp.id} el nombre es = ${temp.name} la cantidad es = ${temp.quantity} this is the unit price ${temp.unitPrice}`);
+    //  console.log(`el ide es= ${temp.id} el nombre es = ${temp.name} la cantidad es = ${temp.quantity} this is the unit price ${temp.unitPrice}`);
     }
 
-    console.log(`totalPrice: ${totalPriceValue.toFixed(2)} totalQuantity: ${totalQuantityValue}`);
-    console.log('----------')
+    //console.log(`totalPrice: ${totalPriceValue.toFixed(2)} totalQuantity: ${totalQuantityValue}`);
+    //console.log('----------')
     
   }
 

@@ -17,6 +17,7 @@ import { CartStatusComponent } from './components/cart-status/cart-status.compon
 import { CartDetailsComponent } from './components/cart-details/cart-details.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { StoreValidatorComponent } from './validators/store-validator/store-validator.component';
 // const routes: Routes = [
 //   {path: 'category/:id', component: ProductListComponent},
 //   {path: 'category', component: ProductListComponent},
@@ -33,7 +34,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductDetailsComponent,
     CartStatusComponent,
     CartDetailsComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    StoreValidatorComponent
   ],
   imports: [
     // RouterModule.forRoot(routes),

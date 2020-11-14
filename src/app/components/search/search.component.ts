@@ -14,7 +14,7 @@ export class SearchComponent implements OnInit {
   }
 
   search(value: string){
-    console.log('key pressed value is', value);
+    //console.log('key pressed value is', value);
     this.router.navigateByUrl(`/search/${value}`);
   }
 

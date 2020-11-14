@@ -56,7 +56,7 @@ export class ProductListComponent implements OnInit {
        
     }
     this.previousKeyword = keyword;
-    console.log(`keywork=${keyword}, pagenumber=${this.pageNumber}`);
+   // console.log(`keywork=${keyword}, pagenumber=${this.pageNumber}`);
 
     this.productService.searchProductsPaginate(this.pageNumber - 1,
       this.pageSize,
@@ -78,7 +78,7 @@ export class ProductListComponent implements OnInit {
 
     this.previousCategoryId = this.currentCategoryId;
 
-    console.log(`currentCatId=${this.currentCategoryId}, pageNumber=${this.pageNumber}`);
+    //console.log(`currentCatId=${this.currentCategoryId}, pageNumber=${this.pageNumber}`);
 
     this.productService.getProductListPaginate(this.pageNumber -1,
       this.pageSize, this.currentCategoryId).subscribe( 
@@ -104,7 +104,7 @@ export class ProductListComponent implements OnInit {
   }
 
   addToCart(product: Product) {
-    console.log(`Adding to cart:${product.name}, ${product.unitPrice}`);
+    //console.log(`Adding to cart:${product.name}, ${product.unitPrice}`);
     const cartItem = new CartItem(product);
     this.cartService.addToCart(cartItem);
 
